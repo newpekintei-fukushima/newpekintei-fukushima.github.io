@@ -153,51 +153,60 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Tapカード全体 */
+/* 黒板のベース設定 */
 .tap-card {
-    background: rgba(0, 0, 0, 0.7);
-    border: 2px solid #ffff92;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 30px;
+    background-color: #222; /* 黒板の濃いグレー */
+    background-image: radial-gradient(circle, #333 1%, transparent 10%);
+    background-size: 10px 10px; /* 微かにチョークの粉っぽさを出す */
+    border: 8px solid #5d4037; /* 木枠（ブラウン） */
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5), inset 0 0 50px rgba(0,0,0,0.8);
     position: relative;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* TAP 1などのラベル */
+/* チョーク文字の基本（白く、少しぼかす） */
+.tap-card * {
+    color: #f5f5f5 !important; /* チョークの白 */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.3) !important;
+    font-family: 'Caveat', cursive; /* 全体的に手書き風に */
+}
+
+/* TAP番号ラベル（チョークで丸囲みした風） */
 .tap-label {
     position: absolute;
-    top: -15px;
-    left: 20px;
-    background: #ff0000;
-    color: #fff;
-    padding: 5px 15px;
-    font-weight: bold;
-    transform: rotate(-5deg);
-    border: 2px solid #fff;
-}
-
-/* ビール名（大きく！） */
-.beer-name {
-    font-size: 3.5rem;
-    margin: 15px 0;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0,0,0,1);
-}
-
-/* ビール情報 */
-.beer-info p {
+    top: 10px;
+    left: 10px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
-    margin: 8px 0 !important;
-    color: #fff !important; /* 本文の黒文字設定を上書き */
-    text-shadow: none !important;
+    transform: rotate(-10deg);
+    background: transparent !important;
 }
 
+/* ビール名（黒板の主役） */
+.beer-name {
+    font-size: 4rem !important;
+    margin: 20px 0 !important;
+    border-bottom: 2px dashed #f5f5f5;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* 項目ラベル（Name:, Style: など） */
 .beer-info span {
-    color: #ffff92;
-    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.8;
     margin-right: 10px;
 }
+
 
 /* フォントバリエーション */
 .font-a { font-family: 'Noto Sans JP', sans-serif; } /* 超極太 */
