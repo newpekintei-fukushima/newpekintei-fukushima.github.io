@@ -34,6 +34,12 @@ body {
     top: 0;           /* 画面の一番上に固定 */
     height: 100vh;    /* 画面の高さに合わせる */
     overflow-y: auto; /* メニューが長い場合に備えて、バーの中だけスクロール可能に */
+
+     display: flex;
+    flex-direction: column;
+    align-items: center;    /* 横方向の中央揃え */
+    justify-content: center; /* 縦方向の中央揃え（お好みで。上詰めなら削除） */
+    text-align: center;     /* 文字自体の中央揃え */
 }
 
 .sidebar h2 {
@@ -45,10 +51,11 @@ body {
 
 .sidebar a {
     display: block;
+      width: 100%; 
     color: #ffff92;
      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;  
     text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 16px;
     font-weight: bold; 
 }
@@ -153,7 +160,6 @@ h2 {
 
     <!-- 左サイド -->
     <div class="sidebar">
-        <h2>MENU</h2>
         <a href="#top">★トップ★</a>
         <a href="#news">♪最新情報♪</a>
         <a href="#menu">🍺本日のTap🍺</a>
