@@ -217,6 +217,34 @@ h2 {
 .font-c { font-family: 'Bangers', system-ui; } /* アメコミ風 */
 .font-d { font-family: 'Caveat', cursive; } /* 手書きオシャレ */
     
+/* 日付の部分（クリックするところ）をもっと見やすく */
+.diary-entry summary {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1.1rem; /* 少し大きく */
+    font-weight: bold;
+    
+    /* 他のテキストと統一：黒文字に白縁取り */
+    color: #000 !important; 
+    text-shadow: 
+        1px  1px 0 #fff, 
+       -1px -1px 0 #fff, 
+        1px -1px 0 #fff, 
+       -1px  1px 0 #fff !important;
+
+    list-style: none;
+    border-bottom: 2px dashed #ffff92; /* 下線を少し太くして区切りを明確に */
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1); /* ほんのり背景を明るくしてクリックしやすく */
+    border-radius: 5px;
+}
+
+/* ホバーした時に少し浮き上がる演出 */
+.diary-entry summary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
     
 </style>
 </head>
