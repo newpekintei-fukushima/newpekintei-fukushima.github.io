@@ -78,6 +78,16 @@ h1 {
     animation: blink 2s infinite alternate;
 }
 
+/* トップセクション内のテキストを読みやすくする */
+#top p {
+    background-color: rgba(0, 0, 0, 0.7); /* 70%の濃さの黒背景 */
+    display: inline-block;                /* 文字の幅に合わせる */
+    padding: 10px 20px;                   /* 内側に余白を作る */
+    border-radius: 8px;                   /* 角を少し丸くする */
+    margin: 5px auto;                     /* 上下の間隔をあける */
+    color: #fff;                          /* 文字は白にしてコントラストを出す */
+}
+    
 /* わずかにチカチカさせるアニメーション（お好みで） */
 @keyframes blink {
     0%, 100% { opacity: 1; }
