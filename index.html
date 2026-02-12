@@ -40,6 +40,11 @@ body::before {
     background-color: #1b1b1b;
     padding: 30px 20px;
     min-height: 100vh;
+
+    position: sticky;  /* スクロールしても位置を保持する */
+    top: 0;           /* 画面の一番上に固定 */
+    height: 100vh;    /* 画面の高さに合わせる */
+    overflow-y: auto; /* メニューが長い場合に備えて、バーの中だけスクロール可能に */
 }
 
 .sidebar h2 {
