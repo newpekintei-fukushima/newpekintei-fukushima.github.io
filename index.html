@@ -67,18 +67,19 @@ body {
 
 h1 {
     margin-top: 0;
-    font-size: 3rem; /* 少し大きくすると映えます */
-    color: #ff0000;     /* 文字の芯は白 */
+    font-size: 5.5rem;   /* ★3remから5.5remへ大幅アップ！★ */
+    color: #ff0000;      /* 文字の芯は赤 */
+    line-height: 1.1;    /* 行間を詰めて塊感を出す */
+    word-break: keep-all; /* 文字が途中で改行されにくくする */
     
-    /* ピンク〜赤系のネオン（中華・バー風）の例 */
+    /* 青色ネオンの光（サイズに合わせて少し数値を大きく調整） */
     text-shadow:
-        0 0 5px #fff,
-        0 0 10px #00d2ff,
-        0 0 20px #00d2ff, /* ぼんやりした光 */
-        0 0 30px #0077ff,
-        0 0 40px #0077ff;
+        0 0 10px #fff,
+        0 0 20px #00d2ff,
+        0 0 40px #00d2ff,
+        0 0 80px #0077ff,
+        0 0 120px #0077ff;
     
-    /* 動きをつけたい場合は以下も追加（点滅） */
     animation: blink 2s infinite alternate;
 }
 
