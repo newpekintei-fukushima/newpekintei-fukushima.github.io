@@ -63,6 +63,25 @@ body {
 
 h1 {
     margin-top: 0;
+    font-size: 3rem; /* 少し大きくすると映えます */
+    color: #fff;     /* 文字の芯は白 */
+    
+    /* ピンク〜赤系のネオン（中華・バー風）の例 */
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff0055, /* ぼんやりした光 */
+        0 0 30px #ff0055,
+        0 0 40px #ff0055;
+    
+    /* 動きをつけたい場合は以下も追加（点滅） */
+    animation: blink 2s infinite alternate;
+}
+
+/* わずかにチカチカさせるアニメーション（お好みで） */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    80% { opacity: 0.9; }
 }
 
 section {
