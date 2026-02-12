@@ -1,0 +1,8 @@
+css
+body {
+  /* 背景画像のパスを指定 */
+  background-image: url("images/ニュー北京亭.jpg"); 
+  
+  /* 画像を縦横に繰り返し表示（デフォルト設定） */
+  background-repeat: repeat; 
+}
