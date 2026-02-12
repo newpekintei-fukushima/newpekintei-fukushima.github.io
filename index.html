@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ニュー北京亭 | New Pekintei</title>
+<link href="https://fonts.googleapis.com" rel="stylesheet">
 
 <style>
 body {
@@ -151,6 +152,60 @@ h2 {
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
 }
+
+/* Tapカード全体 */
+.tap-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffff92;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* TAP 1などのラベル */
+.tap-label {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #ff0000;
+    color: #fff;
+    padding: 5px 15px;
+    font-weight: bold;
+    transform: rotate(-5deg);
+    border: 2px solid #fff;
+}
+
+/* ビール名（大きく！） */
+.beer-name {
+    font-size: 3.5rem;
+    margin: 15px 0;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1);
+}
+
+/* ビール情報 */
+.beer-info p {
+    font-size: 1.2rem;
+    margin: 8px 0 !important;
+    color: #fff !important; /* 本文の黒文字設定を上書き */
+    text-shadow: none !important;
+}
+
+.beer-info span {
+    color: #ffff92;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* フォントバリエーション */
+.font-a { font-family: 'Noto Sans JP', sans-serif; } /* 超極太 */
+.font-b { font-family: 'Rock Salt', cursive; font-size: 2.5rem; } /* 落書き風 */
+.font-c { font-family: 'Bangers', system-ui; } /* アメコミ風 */
+.font-d { font-family: 'Caveat', cursive; } /* 手書きオシャレ */
+    
+    
 </style>
 </head>
 
@@ -204,7 +259,39 @@ h2 {
 
         <section id="menu">
             <h2>本日のTap</h2>
-            <p>Comig Soon...</p>
+
+             <!-- Tap 1: 力強いフォント -->
+    <div class="tap-card">
+        <div class="tap-label">TAP 1</div>
+        <div class="beer-name font-a">電気ブラン×Super Dry</div>
+        <div class="beer-info">
+            <p><span>Beer Style:</span> Japanese style lager</p>
+            <p><span>ABV:</span> 5.0% / <span>IBU:</span> -</p>
+            <p><span>Brewery:</span> Asahi</p>
+        </div>
+    </div>
+
+    <!-- Tap 2: 手書き風フォント -->
+    <div class="tap-card">
+        <div class="tap-label">TAP 2</div>
+        <div class="beer-name font-b">Coming Soon...</div>
+        <div class="beer-info">
+            <p><span>Beer Style:</span> </p>
+            <p><span>ABV:</span> % / <span>IBU:</span> </p>
+            <p><span>Brewery:</span> </p>
+        </div>
+    </div>
+
+    <!-- Tap 3: レトロ・コミック風 -->
+    <div class="tap-card">
+        <div class="tap-label">TAP 3</div>
+        <div class="beer-name font-c">Coming Sonn.</div>
+        <div class="beer-info">
+            <p><span>Beer Style:</span> </p>
+            <p><span>ABV:</span> % / <span>IBU:</span> </p>
+            <p><span>Brewery:</span> </p>
+        </div>
+    </div>
             
         </section>
 
