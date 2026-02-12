@@ -85,7 +85,16 @@ h1 {
 }
 
 section {
-    margin-bottom: 60px;
+    display: none;        /* 最初は全部消しておく */
+    opacity: 0;           /* 透明にする */
+    transform: translateY(20px); /* 少し下にずらしておく */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* ふわっと動かす設定 */
+}
+
+section.active {
+    display: block;
+    opacity: 1;           /* 見えるようにする */
+    transform: translateY(0);    /* 元の位置に戻る */
 }
 
 h2 {
@@ -113,7 +122,7 @@ h2 {
     <!-- 右メイン -->
     <div class="main">
 
-        <section id="top">
+        <section id="top"　class="active" style="display: block;">
             <h1>ニュー北京亭</h1>
             <p>Craft Beer Bar in Fukushima City</p>
             <p><strong>営業時間：</strong>18:00 - 24:00</p>
@@ -154,6 +163,28 @@ h2 {
     </div>
 
 </div>
+
+    <script>
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+
+        document.querySelectorAll('section').forEach(sec => {
+            sec.classList.remove('active');
+            sec.style.display = 'none';
+        });
+
+        const target = document.querySelector(targetId);
+        if (target) {
+            target.style.display = 'block';
+            setTimeout(() => {
+                target.classList.add('active');
+            }, 10);
+        }
+    });
+});
+</script>
 
 </body>
 </html>
